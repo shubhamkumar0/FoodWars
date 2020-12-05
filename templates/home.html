@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:text-align="http://www.w3.org/1999/xhtml" xmlns:display="http://www.w3.org/1999/xhtml">
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+ <div class="login">
+	<h1>Shubham's Ingredient predictor</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="food_1" placeholder="Chicken" required="required" /><br>
+        <input type="text" name="food_2" placeholder="Bread" /><br>
+      <input type="text" name="food_3" placeholder="Enter an ingredient" /><br>
+      <input type="text" name="food_4" placeholder="Enter an ingredient" /><br>
+      <input type="text" name="food_5" placeholder="Enter an ingredient" /><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+ </div>
+</body>
+</html>
